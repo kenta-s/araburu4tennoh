@@ -11,7 +11,7 @@ const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
 const Handle = Slider.Handle;
 
-const wrapperStyle = { width: 400, margin: 50 };
+const wrapperStyle = { width: 400 };
 class Shitennoh extends React.Component {
   constructor(props) {
     super(props);
@@ -88,20 +88,18 @@ class Shitennoh extends React.Component {
 
   render() {
     return (
-      <div>
-        <div style={wrapperStyle}>
-          <p>時間</p>
-          <Slider min={0} max={10} step={1} dots value={this.state.time} onChange={this.handleTime} handle={this.handle} />
+      <div style={wrapperStyle}>
+        <p>時間</p>
+        <Slider min={0} max={10} step={1} dots value={this.state.time} onChange={this.handleTime} handle={this.handle} />
 
-          <p>予算</p>
-          <Slider min={0} max={10} step={1} dots value={this.state.budget} onChange={this.handleBudget} handle={this.handle} />
+        <p>予算</p>
+        <Slider min={0} max={10} step={1} dots value={this.state.budget} onChange={this.handleBudget} handle={this.handle} />
 
-          <p>品質</p>
-          <Slider min={0} max={10} step={1} dots value={this.state.quality} onChange={this.handleQuality} handle={this.handle} />
+        <p>品質</p>
+        <Slider min={0} max={10} step={1} dots value={this.state.quality} onChange={this.handleQuality} handle={this.handle} />
 
-          <p>スコープ</p>
-          <Slider min={0} max={10} step={1} dots value={this.state.scope} onChange={this.handleScope} handle={this.handle} />
-        </div>
+        <p>スコープ</p>
+        <Slider min={0} max={10} step={1} dots value={this.state.scope} onChange={this.handleScope} handle={this.handle} />
       </div>
     );
   }

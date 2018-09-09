@@ -21,6 +21,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "bootstrap": "^4.1.3",
     "lodash": "^4.17.10",
     "postcss-loader": "^3.0.0",
     "rc-slider": "^8.6.2",
