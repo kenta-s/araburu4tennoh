@@ -17,10 +17,14 @@ class Shitennoh extends React.Component {
     super(props);
     this.state = {
       time: 0,
-      buget: 0,
+      budget: 0,
       quality: 0,
       scope: 0
     };
+    this.handleTime = this.handleTime.bind(this);
+    this.handleBudget = this.handleBudget.bind(this);
+    this.handleQuality = this.handleQuality.bind(this);
+    this.handleScope = this.handleScope.bind(this);
   }
 
   handle(props) {
@@ -38,21 +42,65 @@ class Shitennoh extends React.Component {
     );
   };
 
+  values() {
+    return [this.state.time, this.state.budget, this.state.quality, this.state.scope]
+  }
+
+  handleTime(value) {
+    if(this.values().includes(value)){
+      return;
+    }else{
+      this.setState({
+        time: value
+      });
+    }
+  }
+
+  handleBudget(value) {
+    if(this.values().includes(value)){
+      return;
+    }else{
+      this.setState({
+        budget: value
+      });
+    }
+  }
+
+  handleQuality(value) {
+    if(this.values().includes(value)){
+      return;
+    }else{
+      this.setState({
+        quality: value
+      });
+    }
+  }
+
+  handleScope(value) {
+    if(this.values().includes(value)){
+      return;
+    }else{
+      this.setState({
+        scope: value
+      });
+    }
+  }
+
   render() {
     return (
       <div>
         <div style={wrapperStyle}>
           <p>時間</p>
-          <Slider min={0} max={10} defaultValue={0} handle={this.handle} />
+          <Slider min={0} max={10} step={1} dots value={this.state.time} onChange={this.handleTime} handle={this.handle} />
 
           <p>予算</p>
-          <Slider min={0} max={10} defaultValue={0} handle={this.handle} />
+          <Slider min={0} max={10} step={1} dots value={this.state.budget} onChange={this.handleBudget} handle={this.handle} />
 
           <p>品質</p>
-          <Slider min={0} max={10} defaultValue={0} handle={this.handle} />
+          <Slider min={0} max={10} step={1} dots value={this.state.quality} onChange={this.handleQuality} handle={this.handle} />
 
           <p>スコープ</p>
-          <Slider min={0} max={10} defaultValue={0} handle={this.handle} />
+          <Slider min={0} max={10} step={1} dots value={this.state.scope} onChange={this.handleScope} handle={this.handle} />
         </div>
       </div>
     );
