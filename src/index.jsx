@@ -11,21 +11,6 @@ const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
 const Handle = Slider.Handle;
 
-// const handle = (props) => {
-//   const { value, dragging, index, ...restProps } = props;
-//   return (
-//     <Tooltip
-//       prefixCls="rc-slider-tooltip"
-//       overlay={value}
-//       visible={dragging}
-//       placement="top"
-//       key={index}
-//     >
-//       <Handle value={value} {...restProps} />
-//     </Tooltip>
-//   );
-// };
-
 const wrapperStyle = { width: 400, margin: 50 };
 class Shitennoh extends React.Component {
   constructor(props) {
@@ -57,16 +42,16 @@ class Shitennoh extends React.Component {
     return (
       <div>
         <div style={wrapperStyle}>
-          <p>Slider with custom handle</p>
+          <p>時間</p>
           <Slider min={0} max={10} defaultValue={0} handle={this.handle} />
 
-          <p>Slider with custom handle</p>
+          <p>予算</p>
           <Slider min={0} max={10} defaultValue={0} handle={this.handle} />
 
-          <p>Slider with custom handle</p>
+          <p>品質</p>
           <Slider min={0} max={10} defaultValue={0} handle={this.handle} />
 
-          <p>Slider with custom handle</p>
+          <p>スコープ</p>
           <Slider min={0} max={10} defaultValue={0} handle={this.handle} />
         </div>
       </div>
