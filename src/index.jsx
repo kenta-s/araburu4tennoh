@@ -11,7 +11,7 @@ const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
 const Handle = Slider.Handle;
 
-const wrapperStyle = { width: 320 };
+const wrapperStyle = { width: 320, "margin-top": 20 };
 class Shitennoh extends React.Component {
   constructor(props) {
     super(props);
@@ -100,6 +100,8 @@ class Shitennoh extends React.Component {
 
         <p>スコープ</p>
         <Slider min={0} max={5} step={1} dots value={this.state.scope} onChange={this.handleScope} handle={this.handle} />
+
+        <p style={{color: "red", "margin-top": 20}}>同じ目盛りの項目が2つあってはいかん!</p>
       </div>
     );
   }
